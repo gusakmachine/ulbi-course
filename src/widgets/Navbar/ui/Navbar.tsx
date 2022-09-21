@@ -1,5 +1,5 @@
 import cls from './Navbar.module.scss';
-import {RoutePath} from "shared/config/routeConfig";
+import {RoutePath} from "shared/config/routeConfig/routeConfig";
 import {classNames} from "shared/lib/classNames/classNames";
 import AppLink, {AppLinkTheme} from "shared/ui/AppLink/AppLink";
 import {ThemeSwitcher} from "widgets/ThemeSwitcher";
