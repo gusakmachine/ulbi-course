@@ -1,9 +1,9 @@
-import webpack from "webpack";
-import {BuildOptions} from "./types/config";
+import webpack from 'webpack';
+import { BuildOptions } from './types/config';
 
 export default function buildResolvers(options: BuildOptions): webpack.ResolveOptions {
     return {
-        extensions: ['.js', '.ts', '.tsx',],
+        extensions: ['.js', '.ts', '.tsx'],
         alias: {},
         preferAbsolute: true,
         modules: [
