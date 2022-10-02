@@ -3,6 +3,7 @@ import HTMLWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ReactRefreshPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import { BuildOptions } from './types/config';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 
 export default function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPluginInstance[] {
     const plugins: webpack.WebpackPluginInstance[] = [
@@ -16,6 +17,9 @@ export default function buildPlugins({ paths, isDev }: BuildOptions): webpack.We
         }),
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev),
+        }),
+        new BundleAnalyzerPlugin({
+            openAnalyzer: false,
         }),
     ];
 
