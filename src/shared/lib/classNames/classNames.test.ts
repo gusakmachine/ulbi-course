@@ -1,4 +1,4 @@
-import {classNames} from "./classNames";
+import { classNames } from './classNames';
 
 describe('classNames', () => {
     test('with only first param', () => {
@@ -10,8 +10,6 @@ describe('classNames', () => {
     });
 
     test('with mods', () => {
-        expect(classNames(
-            'name', {cl1: true, cl2: false},
-        )).toBe('name cl1');
+        expect(classNames('name', { cl1: true, cl2: false })).toBe('name cl1');
     });
 });
